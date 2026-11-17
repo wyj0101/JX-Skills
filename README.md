@@ -14,17 +14,36 @@
 
 不满足以上三条的，先放草稿区，验证后再转正。
 
+## 分类
+
+| 目录 | 分类 | 收录内容 |
+| --- | --- | --- |
+| `office/` | 办公 | Word / Excel / PPT、PDF、格式转换、批量文档处理 |
+| `work/` | 工作 | 周报月报、会议纪要、任务拆解、项目与流程模板 |
+| `dev/` | 开发 | 脚本工具、Git 工作流、环境配置、调试排查 |
+| `data/` | 数据 | 数据清洗、表格处理、报表统计、可视化 |
+| `media/` | 媒体 | 图片处理、音视频转码、批量重命名与整理 |
+| `automation/` | 自动化 | 定时任务、批处理、系统操作、跨应用联动 |
+
+新分类按需新增，目录名统一用小写英文，单词间用短横线连接。
+
 ## 目录结构
 
 ```
 JX-Skills/
 ├── README.md
-└── <skill-name>/
-    ├── SKILL.md      # 用途、适用/不适用场景、使用方式
-    └── ...           # 配套脚本、模板、资源文件
+├── office/
+│   └── <skill-name>/
+│       ├── SKILL.md      # 用途、适用/不适用场景、使用方式
+│       └── ...           # 配套脚本、模板、资源文件
+├── work/
+├── dev/
+├── data/
+├── media/
+└── automation/
 ```
 
-每个 Skill 一个目录，目录名用小写短横线命名（如 `pdf-split`）。
+每个 Skill 一个目录，目录名用小写短横线命名（如 `office/pdf-split`）。
 
 ## SKILL.md 模板
 
@@ -52,9 +71,10 @@ JX-Skills/
 
 ## 添加流程
 
-1. 新建 `<skill-name>/` 目录，按模板写 `SKILL.md`
-2. 本地验证一遍，确保能独立跑通
-3. 提交：`git add . && git commit -m "add: <skill-name>" && git push`
+1. 在对应分类目录下新建 `<skill-name>/`
+2. 按模板写 `SKILL.md`，目录里放配套脚本或模板
+3. 本地验证一遍，确保能独立跑通
+4. 提交：`git add . && git commit -m "add: <skill-name>" && git push`
 
 ## 维护约定
 
